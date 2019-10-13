@@ -1,1 +1,0 @@
-// +heroku install ./source_code/main
