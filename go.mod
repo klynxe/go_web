@@ -1,5 +1,5 @@
 // +heroku install ./main
-module source_code
+module ./source_code
 
 go 1.13
 
