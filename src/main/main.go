@@ -2,7 +2,6 @@ package main
 
 import (
 	"database/sql"
-	"fmt"
 	_ "github.com/lib/pq"
 	"log"
 	"net/http"
@@ -16,7 +15,6 @@ func main() {
 		connect = "dbname=" + "klynxe" + " user=" + "egor" +
 			" password=" + "12345" + " host=" + "localhost" + " port=" + "5432" + " sslmode=" + "disable"
 	}
-	fmt.Println("%v", t.T)
 	_, err := sql.Open("postgres", connect)
 	if err != nil {
 		log.Fatal(err)
