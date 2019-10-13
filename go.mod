@@ -1,4 +1,4 @@
-module ./sorce_code/main
+module ./source_code/main
 
 go 1.13
 
