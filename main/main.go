@@ -24,7 +24,7 @@ func main() {
 	if port == "" {
 		port = "8080"
 	}
-	http.Handle("/", http.FileServer(http.Dir("./src/client/angular-cli/dist/angular-cli/")))
+	http.Handle("/", http.FileServer(http.Dir("./source_code/client/angular-cli/dist/angular-cli/")))
 
 	http.ListenAndServe(":"+port, nil)
 
