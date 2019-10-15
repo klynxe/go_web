@@ -9,13 +9,13 @@ import (
 )
 
 func main() {
-
 	connect := os.Getenv("DATABASE_URL")
-	if connect == "" {
-		connect = "dbname=" + "klynxe" + " user=" + "egor" +
-			" password=" + "12345" + " host=" + "localhost" + " port=" + "5432" + " sslmode=" + "disable"
+	db, err := sql.Open("postgres", connect)
+	if err != nil {
+		log.Fatal(err)
 	}
-	_, err := sql.Open("postgres", connect)
+
+	err = db.Ping()
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -24,7 +24,7 @@ func main() {
 	if port == "" {
 		port = "8080"
 	}
-	http.Handle("/", http.FileServer(http.Dir("./source_code/client/angular-cli/dist/angular-cli/")))
+	http.Handle("/", http.FileServer(http.Dir("./client/dist/angular-cli/")))
 
 	http.ListenAndServe(":"+port, nil)
 
