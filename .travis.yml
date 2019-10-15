@@ -2,6 +2,7 @@ language: go
 deploy:
   provider: heroku
   api_key:
-    secure: "$HEROKU_TOKEN"
-  app: klynxe
-  skip_cleanup: true
+    secure: IANCwq4SpNuioRP+mJWIKnkz5OXq/YAtBr90VWe1+At6gCCH3RHTTu85dXEK/mJtXPMoS2BADOVEWXLbva4/LOXSK54oso1ZK/cBwo37SW4J+55GQO0RTfv8b1PvC91nCbD3GWMGd7CeVlMOqS/AgLqiWKI7sIsVebpOZKeNfz3K2XR12BOkOt4WK27S1H7B02+VepW5JZ/KoSUQujFKbAr/wBpQxKAD04gvI+8RAhf2+Lb1TQ4On/AfcN3zhyH2MJsOlXszJJvO2sODAb1Tj/qkWLA7iabnnKs/kpMvGKDFVVGlO1dFVeVMxNZV2tUdzbBrHoTMO79prlI40W2IYJCKK+/NrVD+kQ9J6xWWVM1KVT4HQvAswqwm6FwqE+J0wk6d0JGwdqHJtbyIgZc5lgESRYPUzROnz6SxXY5qP/o2y6v3m4OplovGHib/KanuGX8WhhgBK54t9cwKxNZty9HbY5ON62S7xChq/AnPEgaBFrYJPjUp8MuXkClkBjqNew36TGH0JjmLPjmipwm3XESVE12oyf6n0E+DKmkVzEXv6Pv32TOvpu/1fk66Ut7oEI9vKPAhmtxXOxALYD+pCD1mm3vxR+o3ot/Ifgb0QBr8WhpCUvPcD9rK4BRbrBUZJP5CoYAyRxE+AaAAI1odcvuvmCAtOPmoNpOthL0udpQ=
+  app: go_web
+  on:
+    repo: klynxe/go_web
