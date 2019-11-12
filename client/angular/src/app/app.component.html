@@ -1,0 +1,8 @@
+
+    <a md-menu-item *ngFor="let item of menuItems" [routerLink]="item.route">
+      <span>{{item.title}}</span>
+    </a>
+
+<div id="content">
+  <router-outlet></router-outlet>
+</div>

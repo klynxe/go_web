@@ -1,0 +1,11 @@
+<p>Sign up</p>
+<form #signUpForm="ngForm" (ngSubmit)="onSignUp(signUpForm)" novalidate>
+  <span>Логин<input name="login" ngModel required #first="ngModel"></span>
+  <span>E-Mail<input name="email" ngModel></span>
+  <span>Пароль<input name="password" ngModel></span>
+  <re-captcha name="re-captcha"
+          (resolved)="resolved($event)"
+          siteKey="6LclxL0UAAAAAChUGOwd9kM1SwDJYsBDt6J-pJyF"
+  ></re-captcha>
+  <button class="btn-success">Sign up</button>
+</form>
