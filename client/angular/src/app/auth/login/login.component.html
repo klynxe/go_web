@@ -1,1 +1,10 @@
-<p>login works!</p>
+<p>Authorization page</p>
+<form #authForm="ngForm" (ngSubmit)="onAuth(authForm)" novalidate>
+  <span>Логин/E-Mail<input name="login" ngModel required #first="ngModel"></span>
+  <span>Пароль<input name="password" ngModel></span>
+  <re-captcha name="re-captcha"
+              (resolved)="resolved($event)"
+              siteKey="6LclxL0UAAAAAChUGOwd9kM1SwDJYsBDt6J-pJyF"
+  ></re-captcha>
+  <button class="btn-success">Auth</button>
+</form>

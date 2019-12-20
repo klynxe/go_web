@@ -33,7 +33,7 @@ export class SignUpComponent implements OnInit {
   onSignUp(signUpForm : NgForm) {
     console.log(signUpForm);
 
-    this.http.post('http://127.0.0.1:8080/sign-up', {login:signUpForm.value.login, email: signUpForm.value.email, passwprd:signUpForm.value.password, token:this.token}, httpOptions).subscribe(resp => {
+    this.http.post('http://127.0.0.1:8080/sign-up', {login:signUpForm.value.login, email: signUpForm.value.email, password:signUpForm.value.password, token:this.token}, httpOptions).subscribe(resp => {
       console.log(`Resp: ${JSON.stringify(resp)}`);
     })
   }
